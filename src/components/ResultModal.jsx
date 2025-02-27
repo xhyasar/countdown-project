@@ -1,6 +1,8 @@
-export default function ResultModal({result, targetTime}) {
+import {useRef} from "react";
+
+export default function ResultModal({ref, result, targetTime}) {
     return (
-        <dialog className="result-modal">
+        <dialog ref={dialog} className="result-modal">
             <h2>Your {result}</h2>
             <p>
                 The target time was <strong>{targetTime} seconds.</strong>
